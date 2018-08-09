@@ -5,7 +5,8 @@ class HomeController < ApplicationController
 
   def refresh
     scrap = StartScrap.new("https://coinmarketcap.com/all/views/all/")
-    scrap.perform.save
+    scrap.perform
+    scrap.save
     @display_crypto = nil
     redirect_to root_path
   end

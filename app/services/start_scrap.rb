@@ -27,6 +27,7 @@ class StartScrap
     @currencies.each do |currency|
       if crypto = Crypto.find_by(name: currency[:name])
         crypto.price = currency[:price]
+        crypto.save
       else
         Crypto.create(
           name: currency[:name],
