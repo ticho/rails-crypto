@@ -1,24 +1,19 @@
-# README
+# Rails Crypto
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[https://tibo-rails-crypto.herokuapp.com/](https://tibo-rails-crypto.herokuapp.com/)
 
-Things you may want to cover:
+First attempt at creating and using rails services.
 
-* Ruby version
+Using the `nokogiri` gem to scrap the website.
 
-* System dependencies
+To install the app dependencies, start the db and seed it :
+```sh
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To start the run the app locally
+```sh
+$ rails s
+```
