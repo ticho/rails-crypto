@@ -1,0 +1,19 @@
+<h1>Crypto website</h1>
+
+<%= form_tag home_display_url do %>
+  <%= label_tag :crypto, "Crypto name : " %>
+  <% if @display_crypto %>
+    <%= select_tag "crypto_id", options_from_collection_for_select(@cryptos, "id", "name", @display_crypto.id) %>
+  <% else %>
+    <%= select_tag "crypto_id", options_from_collection_for_select(@cryptos, "id", "name") %>
+  <% end %>
+  <%= submit_tag 'Go!' %>
+<% end %>
+
+<br>
+
+<% if @display_crypto %>
+The price of <%= @display_crypto.name %> is $<%= @display_crypto.price %>.
+<% else %>
+Pick a cryptocurrency to see its value on the market.
+<% end %>
